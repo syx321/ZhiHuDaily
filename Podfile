@@ -1,8 +1,10 @@
-
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
+platform :ios, '14.0'
 use_frameworks!
 
 target 'ZhiHuDaily' do
-    pod 'SnapKit', '~> 4.0'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'Alamofire', '~> 5.2'
+    pod 'SnapKit', '~> 5.0.0'
+    pod 'SwiftDate', '~> 6.0.3'
 end
+
