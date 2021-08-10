@@ -14,7 +14,6 @@ class CustomizeUITableViewCell : UITableViewCell {
     var hint : UILabel!
     var title : UILabel!
     var picture : UIImage!
-//    var pictureView : UIImageView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -32,6 +31,7 @@ class CustomizeUITableViewCell : UITableViewCell {
         hint.font = .boldSystemFont(ofSize: 13)
         hint.textColor = .gray
         
+        
         viewContainer.addSubview(title)
         viewContainer.addSubview(hint)
         self.addSubview(viewContainer)
@@ -45,7 +45,7 @@ class CustomizeUITableViewCell : UITableViewCell {
         
         title.snp.makeConstraints { (make) in
             make.width.equalToSuperview().offset(-20)
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(18)
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().offset(-10)
 
@@ -66,6 +66,7 @@ class CustomizeUITableViewCell : UITableViewCell {
     }
 }
 
+//MARK: -图片扩展下载方法
 extension UIImageView {
     func downloadedFrom(imageurl : String){
             //创建URL对象

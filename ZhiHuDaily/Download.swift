@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class Download{
     
-    func getLast(_ url:String,closure:@escaping (JSON)->Void){
+    func getContent(_ url:String,closure:@escaping (JSON)->Void){
         let urlString = url
         let url:URL! = URL(string: urlString)
 

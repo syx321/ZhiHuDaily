@@ -10,7 +10,6 @@ import UIKit
 import WebKit
 
 class ReadPage: UIViewController, WKUIDelegate, WKNavigationDelegate {
-    lazy var detailView = WKWebView()
     var myURL:String!
     
     init(_ url:String) {
@@ -27,9 +26,14 @@ class ReadPage: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         let screenRect = UIScreen.main.bounds.size
-        let tableRect = CGRect(x: 0, y: 10, width: screenRect.width, height: screenRect.height-10)
+        let tableRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.height-50)
+        let controlRect = CGRect(x: 0, y: screenRect.height-50, width: screenRect.width, height: 50)
+        
+        let controlBar = UIView(frame: controlRect)
+        controlBar.backgroundColor = .gray
         
         let webview = WKWebView(frame: tableRect)
         //创建网址
@@ -39,43 +43,37 @@ class ReadPage: UIViewController, WKUIDelegate, WKNavigationDelegate {
         //加载请求
         webview.load(request as URLRequest)
         //添加wkwebview
+        
+        let back = UIButton()
+        let poweron = UILabel()
+        
+        back.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        poweron.text = " ⎸"
+        controlBar.backgroundColor = .systemBackground
+        self.view.backgroundColor = .systemBackground
+        
         self.view.addSubview(webview)
+        self.view.addSubview(controlBar)
+        controlBar.addSubview(back)
+        controlBar.addSubview(poweron)
+        
+        //back.addAction(UIAction(, for: <#T##UIControl.Event#>)
+        
+        back.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(17)
+            make.centerY.equalTo(controlBar.snp.centerY)
+        }
+        
+        poweron.snp.makeConstraints { make in
+            make.left.equalTo(back.snp.right).offset(15)
+            make.centerY.equalTo(back.snp.centerY).offset(-2)
+        }
+        
+        
     }
+}
+
+class Comment: UIView {
     
 
 }
-
-//class Comment: UIViewController {
-//    weak var controller : UIViewController?
-//    var labelTxt = ""
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        let lab = UILabel(frame: CGRect(x: 90, y: 100, width: 240, height: 44))
-//        lab.text = labelTxt
-//
-//        let b = UIButton(frame: CGRect(x: 80, y: 180, width: 240, height: 44))
-//        b.setTitle("返回", for: .normal)
-//        b.backgroundColor = .black
-//        b.addTarget(self, action: #selector(self.dismissSelf), for: .touchUpInside)
-//
-//        self.view.backgroundColor = .systemBackground
-//        self.view.addSubview(lab)
-//        self.view.addSubview(b)
-//
-//        // Do any additional setup after loading the view.
-//    }
-//
-//    @objc func dismissSelf(){
-//        print("关闭评论")
-//
-////        controller?.label.text = "返回的参数"
-//        self.dismiss(animated: true, completion: nil)
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
-//
-//}

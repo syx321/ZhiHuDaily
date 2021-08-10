@@ -15,14 +15,14 @@ class CustomizeNavigateBar : UIView{
     var date2 = UILabel()
     var greeting = UILabel()
     var user = UIImageView()
-    var dash = UILabel()
+    var poweron = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         rootView.addSubview(date1)
         rootView.addSubview(date2)
-        rootView.addSubview(dash)
+        rootView.addSubview(poweron)
         rootView.addSubview(greeting)
         rootView.addSubview(user)
         self.addSubview(rootView)
@@ -31,9 +31,13 @@ class CustomizeNavigateBar : UIView{
         date1.font = .boldSystemFont(ofSize: 20)
         date2.font = .boldSystemFont(ofSize: 13)
         greeting.font = .boldSystemFont(ofSize: 25)
+        
+        let China = Region(calendar: Calendars.gregorian, zone: Zones.asiaShanghai, locale: Locales.chineseChina)
+        SwiftDate.defaultRegion = China
         let date = Date()
         date1.text = date.day.description
         date2.text = self.intIntoString(number: Int(date.month.description)!)+"月"
+        poweron.text = " ⎸"
         greeting.text = self.timeOfDay(date: date) + "!"
         user.image = UIImage(systemName: "person")
         
@@ -48,7 +52,7 @@ class CustomizeNavigateBar : UIView{
             make.width.equalTo(40)
             make.height.equalTo(30)
             make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(35)
+            make.top.equalToSuperview().offset(30)
         }
         
         date2.snp.makeConstraints { (make) in
@@ -58,10 +62,15 @@ class CustomizeNavigateBar : UIView{
             make.top.lessThanOrEqualTo(date1.snp.bottom).offset(-10)
         }
         
+        poweron.snp.makeConstraints { make in
+            make.left.equalTo(date1.snp.right)
+            make.centerY.equalToSuperview().offset(13)
+        }
+        
         greeting.snp.makeConstraints { (make) in
             make.width.equalTo(100)
             make.height.equalToSuperview()
-            make.left.equalTo(date1.snp.right).offset(20)
+            make.left.equalTo(poweron.snp.right).offset(15)
             make.centerY.equalToSuperview().offset(13)
             
         }
@@ -101,8 +110,8 @@ class CustomizeNavigateBar : UIView{
     }
     
     func timeOfDay(date:Date) -> String{
-        let hour = date.hour + 8
-        debugPrint(date.day,hour,date.minute)
+        let hour = date.hour
+//        debugPrint(date.day,hour,date.minute)
         if (hour >= 5 ) && ( hour < 10) {return "早上好"}
         else if (hour >= 10 ) && (hour < 14) {return "中午好"}
         else if (hour >= 14) && (hour < 17) {return "下午好"}
