@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D5221392632E9230086516E /* CustomizeNavigateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5221382632E9230086516E /* CustomizeNavigateBar.swift */; };
 		4D52BAA4262C389B002A95A6 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52BAA3262C389B002A95A6 /* Download.swift */; };
+		4DA08F9826C61CDA002433AA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA08F9726C61CDA002433AA /* Comment.swift */; };
 		4DAA99F2261D795600BCB857 /* CustomizeUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA99F1261D795600BCB857 /* CustomizeUITableViewCell.swift */; };
 		4DCB5E3E2611713900966DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB5E3D2611713900966DE1 /* AppDelegate.swift */; };
 		4DCB5E452611713900966DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB5E432611713900966DE1 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		4DCB5E4A2611713B00966DE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB5E482611713B00966DE1 /* LaunchScreen.storyboard */; };
 		4DCB5E59261172FE00966DE1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB5E58261172FE00966DE1 /* MainPage.swift */; };
 		4DCB5E5C261173CA00966DE1 /* ReadPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB5E5B261173C900966DE1 /* ReadPage.swift */; };
+		4DF0562B26C6850E0051DE9F /* Popularity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF0562A26C6850E0051DE9F /* Popularity.swift */; };
 		8C0F8F4349B079A1212C2BCB /* Pods_ZhiHuDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7D7D6D5A6FE48A8F50DD10 /* Pods_ZhiHuDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,7 @@
 		0EE887342445C693EC0CC150 /* Pods-ZhiHuDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHuDaily.debug.xcconfig"; path = "Target Support Files/Pods-ZhiHuDaily/Pods-ZhiHuDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		4D5221382632E9230086516E /* CustomizeNavigateBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeNavigateBar.swift; sourceTree = "<group>"; };
 		4D52BAA3262C389B002A95A6 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		4DA08F9726C61CDA002433AA /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		4DAA99F1261D795600BCB857 /* CustomizeUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeUITableViewCell.swift; sourceTree = "<group>"; };
 		4DCB5E3A2611713900966DE1 /* ZhiHuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiHuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCB5E3D2611713900966DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		4DCB5E4B2611713B00966DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DCB5E58261172FE00966DE1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		4DCB5E5B261173C900966DE1 /* ReadPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPage.swift; sourceTree = "<group>"; };
+		4DF0562A26C6850E0051DE9F /* Popularity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popularity.swift; sourceTree = "<group>"; };
 		8A151B4D4D03305C90E60682 /* Pods-ZhiHuDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHuDaily.release.xcconfig"; path = "Target Support Files/Pods-ZhiHuDaily/Pods-ZhiHuDaily.release.xcconfig"; sourceTree = "<group>"; };
 		BD7D7D6D5A6FE48A8F50DD10 /* Pods_ZhiHuDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhiHuDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,6 +61,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4DA08F9526C61C92002433AA /* main */ = {
+			isa = PBXGroup;
+			children = (
+				4DCB5E58261172FE00966DE1 /* MainPage.swift */,
+				4DAA99F1261D795600BCB857 /* CustomizeUITableViewCell.swift */,
+				4D5221382632E9230086516E /* CustomizeNavigateBar.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		4DA08F9626C61CBD002433AA /* read */ = {
+			isa = PBXGroup;
+			children = (
+				4DCB5E5B261173C900966DE1 /* ReadPage.swift */,
+				4DA08F9726C61CDA002433AA /* Comment.swift */,
+				4DF0562A26C6850E0051DE9F /* Popularity.swift */,
+			);
+			path = read;
+			sourceTree = "<group>";
+		};
 		4DCB5E312611713900966DE1 = {
 			isa = PBXGroup;
 			children = (
@@ -78,16 +102,14 @@
 		4DCB5E3C2611713900966DE1 /* ZhiHuDaily */ = {
 			isa = PBXGroup;
 			children = (
+				4DA08F9526C61C92002433AA /* main */,
+				4DA08F9626C61CBD002433AA /* read */,
 				4DCB5E3D2611713900966DE1 /* AppDelegate.swift */,
 				4DCB5E432611713900966DE1 /* Main.storyboard */,
 				4DCB5E462611713B00966DE1 /* Assets.xcassets */,
 				4DCB5E482611713B00966DE1 /* LaunchScreen.storyboard */,
 				4DCB5E4B2611713B00966DE1 /* Info.plist */,
-				4DCB5E58261172FE00966DE1 /* MainPage.swift */,
-				4DCB5E5B261173C900966DE1 /* ReadPage.swift */,
-				4DAA99F1261D795600BCB857 /* CustomizeUITableViewCell.swift */,
 				4D52BAA3262C389B002A95A6 /* Download.swift */,
-				4D5221382632E9230086516E /* CustomizeNavigateBar.swift */,
 			);
 			path = ZhiHuDaily;
 			sourceTree = "<group>";
@@ -217,6 +239,8 @@
 				4DAA99F2261D795600BCB857 /* CustomizeUITableViewCell.swift in Sources */,
 				4DCB5E3E2611713900966DE1 /* AppDelegate.swift in Sources */,
 				4D5221392632E9230086516E /* CustomizeNavigateBar.swift in Sources */,
+				4DA08F9826C61CDA002433AA /* Comment.swift in Sources */,
+				4DF0562B26C6850E0051DE9F /* Popularity.swift in Sources */,
 				4DCB5E5C261173CA00966DE1 /* ReadPage.swift in Sources */,
 				4DCB5E59261172FE00966DE1 /* MainPage.swift in Sources */,
 				4D52BAA4262C389B002A95A6 /* Download.swift in Sources */,
